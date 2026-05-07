@@ -29,11 +29,17 @@ composer require pekhota/nova-multifile
 
 ### Defining the field in an action
 
+> **Important:** Nova serializes action field values into its action event log. Because
+> `UploadedFile` objects cannot be serialized, you **must** add `public $withoutActionEvents = true;`
+> to any action that uses this field.
+
 ```php
 use Pekhota\NovaMultiFile\MultiFile;
 
 class ImportDocuments extends Action
 {
+    public $withoutActionEvents = true;
+
     public function fields(NovaRequest $request): array
     {
         return [
