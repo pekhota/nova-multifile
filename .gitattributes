@@ -1,0 +1,4 @@
+# Exclude non-essential files from composer installs
+.github/**        export-ignore
+tests/**          export-ignore
+phpunit.xml.dist  export-ignore

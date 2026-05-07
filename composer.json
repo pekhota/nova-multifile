@@ -1,0 +1,61 @@
+{
+    "name": "pekhota/nova-multifile",
+    "type": "library",
+    "description": "Nova MultiFile – a multiple file upload field for Laravel Nova actions",
+    "keywords": [
+        "laravel",
+        "nova",
+        "file",
+        "upload",
+        "multifile"
+    ],
+    "authors": [
+        {
+            "name": "Oleksandr Piekhota",
+            "email": "pekhota.alex@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "laravel/nova": "^5.8",
+        "laravel/nova-devtool": "^1.7",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0|^4.0"
+    },
+    "repositories": [
+        { "type": "composer", "url": "https://nova.laravel.com" }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pekhota\\NovaMultiFile\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pekhota\\NovaMultiFile\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest --compact"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pekhota\\NovaMultiFile\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,15 @@
+name: Lint
+
+on: [pull_request, push]
+
+jobs:
+  composer-validate:
+    name: Validate composer.json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate
+        run: composer validate --strict --no-check-publish
