@@ -5,7 +5,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
-## [1.0.0] – 2025-05-06
+## [1.0.1] – 2026-05-07
+
+### Documentation
+
+- Document that actions using `MultiFile` must set `public $withoutActionEvents = true;` to avoid a serialization error — Nova attempts to serialize `UploadedFile` objects into the action event log, which PHP does not allow.
+
+---
+
+## [1.0.0] – 2026-05-07
 
 ### Added
 
