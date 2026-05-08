@@ -49,6 +49,7 @@
             multiple
             :accept="field.accept || ''"
             class="nova-multifile-input"
+            @click.stop
             @change="onInputChange"
           />
         </div>

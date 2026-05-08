@@ -5,6 +5,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [1.0.2] – 2026-05-08
+
+### Fixed
+
+- Prevent click event on the hidden file input from bubbling back to the dropzone and re-triggering `triggerInput()` — adds `@click.stop` to the `<input>` in `FormField.vue` and the equivalent `withModifiers` stop modifier in `dist/js/field.js`.
+
+### Documentation
+
+- Add `AGENTS.md` documenting intentional design decisions (client-side-only `accept()`/`maxFiles()`, `forceFill()` usage, hand-crafted dist) to suppress false-positive AI code review alerts.
+
+---
+
 ## [1.0.1] – 2026-05-07
 
 ### Documentation

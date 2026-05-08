@@ -189,6 +189,7 @@
                   multiple: '',
                   accept: $props.field && $props.field.accept ? $props.field.accept : '',
                   class: 'nova-multifile-input',
+                  onClick: r.withModifiers(function () {}, ['stop']),
                   onChange: function (e) { return $options.onInputChange && $options.onInputChange(e); },
                 }, null, 8, ['accept', 'onChange']),
 
